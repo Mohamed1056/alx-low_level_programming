@@ -35,4 +35,5 @@ char *str_concat(char *s1, char *s2)
 		v++;
 	}
 	return (ptr);
+	free(ptr);
 }
