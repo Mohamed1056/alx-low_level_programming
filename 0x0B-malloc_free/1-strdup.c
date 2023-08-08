@@ -1,6 +1,5 @@
 #include"main.h"
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * *_strdup - function to double any string
@@ -13,18 +12,22 @@
 char *_strdup(char *str)
 {
 	int i, x;
-	/*after declaration*/
-	x = strlen(str);
 	char *ptr;
-	/*after declaration*/
-	ptr = malloc(x * sizeof(char*));
+	/*after declartion*/
 	if (str == NULL)
+	{
+		return (NULL);
+	}
+	for (x = 0; str[x] != '\0'; x++)
+	;
+	ptr = malloc(x * sizeof(*str) + 1);
+	if (ptr == 0)
 	{
 		return (NULL);
 	}
 	else
 	{
-		for (i = 0; i <= x; ++i)
+		for (i = 0; i < x; i++)
 		{
 			ptr[i] = str[i];
 		}
