@@ -17,8 +17,10 @@ char *str_concat(char *s1, char *s2)
 	char *ptr;
 	/*after decleration*/
 	v = 0;
-	if (s1 == NULL && s2 == NULL)
-		return (" ");
+	if (s1 == NULL)
+		s1 = "\0";
+	if (s2 == NULL)
+		s2 = "\0";
 	for (i = 0; s1[i] != '\0'; i++)
 	;
 	for (x = 0; s2[x] != '\0'; x++)
