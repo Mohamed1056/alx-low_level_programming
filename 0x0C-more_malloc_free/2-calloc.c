@@ -2,14 +2,14 @@
 #include <stdlib.h>
 
 /**
- * _memsot - function to print what we want
+ * *_memsot - function to print what we want
  * @s: takes the 1st input for the function
  * @b: takes the 2nd input for the function
  * @n: takes the 3rd input for the function
  * Return: ptr
 */
 
-char _memsot(char *s, char b, unsigned int n)
+char *_memsot(char *s, char b, unsigned int n)
 {
 	char *ptr = s;
 	/*after decleration*/
