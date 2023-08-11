@@ -11,13 +11,15 @@
 
 char *_memsot(char *s, char b, unsigned int n)
 {
-	char *ptr;
+	int i;
 	/*after decleration*/
-	ptr = s;
-	while (n--)
-		*s++ = b;
-	return (ptr);
+	for (i = 0; i < n; i++)
+	{
+		s[i] = b;
+	}
+	return (s);
 }
+
 /**
  * *_calloc -function to do what we want
  * @nmemb: takes the input for the function
@@ -31,7 +33,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	/*after decleration*/
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	m = malloc(sizeof(int) * nmemb);
+	m =(int *)malloc(sizeof(int) * nmemb);
 	if (m == 0)
 		return (NULL);
 	_memsot(m, 0, sizeof(int) * nmemb);
