@@ -33,7 +33,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	/*after decleration*/
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	m =malloc(size * nmemb);
+	m = malloc(size * nmemb);
 	if (m == 0)
 		return (NULL);
 	_memsot(m, 0, size * nmemb);
