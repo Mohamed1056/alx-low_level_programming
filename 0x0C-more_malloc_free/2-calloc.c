@@ -6,12 +6,12 @@
  * @s: takes the 1st input for the function
  * @b: takes the 2nd input for the function
  * @n: takes the 3rd input for the function
- * Return: ptr
+ * Return: s
 */
 
 char *_memsot(char *s, char b, unsigned int n)
 {
-	int i;
+	unsigned int i;
 	/*after decleration*/
 	for (i = 0; i < n; i++)
 	{
@@ -34,7 +34,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 	m = malloc(size * nmemb);
-	if (m == 0)
+	if (m == NULL)
 		return (NULL);
 	_memsot(m, 0, size * nmemb);
 	return (m);
