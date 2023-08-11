@@ -11,8 +11,9 @@
 
 char *_memsot(char *s, char b, unsigned int n)
 {
-	char *ptr = s;
+	char *ptr;
 	/*after decleration*/
+	ptr = s;
 	while (n--)
 		*s++ = b;
 	return (ptr);
