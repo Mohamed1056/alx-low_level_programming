@@ -29,14 +29,14 @@ char *_memsot(char *s, char b, unsigned int n)
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *m;
+	char *m;
 	/*after decleration*/
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	m =(int *)malloc(sizeof(int) * nmemb);
+	m =malloc(size * nmemb);
 	if (m == 0)
 		return (NULL);
-	_memsot(m, 0, sizeof(int) * nmemb);
+	_memsot(m, 0, size * nmemb);
 	return (m);
 }
 
