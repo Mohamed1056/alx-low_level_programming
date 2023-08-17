@@ -9,7 +9,7 @@
 
 void format_char(char *separator, va_list ap)
 {
-	printf("%s%c", separator, va_arg(ap, char));
+	printf("%s%c", separator, va_arg(ap, int));
 }
 
 /**
@@ -73,7 +73,7 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 
-	va_star(ap, format);
+	va_start(ap, format);
 	while (format && format[i])
 	{
 		j = 0;
