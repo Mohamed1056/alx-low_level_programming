@@ -21,20 +21,23 @@ int _strlen(char *str)
 /**
  * print_list - function to print a linked list
  * @h : takes the input of the function
- * Return: m
+ * Return: k
 */
+
 size_t print_list(const list_t *h)
 {
-	size_t m = 0;
+	size_t k = 0;
 
 	while (h)
 	{
 		if (!h->str)
 			printf("[0] (nil)\n");
 		else
-			printf("[%d] %s\n", _strlen(h->str), h->str);
+			printf("[%u] %s\n", h->len, h->str);
 		h = h->next;
-		m++;
+		k++;
 	}
-	return (m);
+
+	return (k);
 }
+
