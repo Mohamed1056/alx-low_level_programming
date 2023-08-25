@@ -1,15 +1,14 @@
-section		.text
-	extern	printf
-	global	main
-
+	global   main
+	  extern    printf
 /*before main*/
 
 main:
-	mov		edi, msg
-	mov		eax, 0
-	call	printf
-
+	  mov   edi, format
+	  xor   eax, eax
+	  call  printf
+	  mov   eax, 0
+	  ret
 /*after main*/
 
-swction		.data
-	msg db 'Hello, Holberton', 0xa, 0
+format: db `Hello, Holberton\n`,0
+
