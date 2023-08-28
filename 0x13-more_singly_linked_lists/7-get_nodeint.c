@@ -9,19 +9,10 @@
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	int i = 0;
+	unsigned int i;
 	listint_t *search;
 
-	if (!head)
-		return (NULL);
-	search = head;
-	while (i <= index)
-	{
-		if (search != NULL)
-		{
-			search = search->next;
-		}
-		i++;
-	}
+	for (search = head, i = 0; search && i < index; search = serach->next, i++)
+		;
 	return (search);
 }
